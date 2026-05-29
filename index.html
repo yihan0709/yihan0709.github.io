@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>趙羿涵 Yi-Han Chao | 個人網頁 & 專業簡歷</title>
+    <meta name="description"
+        content="趙羿涵 (Yi-Han Chao) 的個人網站。國立臺北科技大學電子工程系，專注於程式設計、演算法與深度學習研究，曾獲得北科大三育獎、APCS 4級/3級、TOEIC 780分與多次校內資訊能力競賽大獎。">
+    <meta name="keywords" content="趙羿涵, Yi-Han Chao, 北科大電子, 中山女高, APCS, TOEIC, 個人網頁, 簡歷, 資訊競賽, 女工程師">
+    <meta name="author" content="趙羿涵">
+
+    <!-- Open Graph (Facebook, Discord, etc.) -->
+    <meta property="og:title" content="趙羿涵 Yi-Han Chao | 個人網頁 & 專業簡歷">
+    <meta property="og:description" content="國立臺北科技大學電子系。專注於研究大型語言模型 (LLM) 潛在空間之間的關係與跨模態語意理解。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yihan0709.github.io">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background glowing ambient blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- Header & Navigation -->
+    <header id="main-header">
+        <div class="header-container">
+            <a href="#" class="logo-text">Yi-Han<span>.</span></a>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="#about" class="nav-link active">關於我</a></li>
+                    <li><a href="#education" class="nav-link">教育背景</a></li>
+                    <li><a href="#experience" class="nav-link">經歷與專案</a></li>
+                    <li><a href="#activities" class="nav-link">學術活動</a></li>
+                    <li><a href="#courses" class="nav-link">修課表現</a></li>
+                    <li><a href="#contact" class="nav-link">聯絡我</a></li>
+                </ul>
+            </nav>
+            <button id="mobile-toggle" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="section-container">
+            <div class="hero-content">
+                <div class="badge-glow">國立臺北科技大學 電子系</div>
+                <h1 class="hero-title">你好，我是 <span>趙羿涵</span></h1>
+                <div class="hero-typing">
+                    <span class="static-text">我專注於</span>
+                    <span id="typewriter" class="dynamic-text"></span>
+                </div>
+                <p class="hero-description">
+                    目前就讀於國立臺北科技大學電子工程系大一。熱愛演算法思維與軟硬體實作，具備優秀的程式邏輯能力。曾擔任中山女高資訊研究社教學組組長，並多次在校內資訊能力競賽中獲得一等獎等殊榮。現正積極修習電資核心領域，累積豐富的實作專案與微課程學術底蘊。
+                </p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary" id="btn-contact-hero">聯絡我</a>
+                    <a href="#experience" class="btn btn-secondary" id="btn-view-research">經歷與專案</a>
+                </div>
+
+                <!-- Social & Contact quick access -->
+                <div class="hero-socials">
+                    <a href="mailto:t114360201@ntut.org.tw" class="social-icon-btn" title="Email" id="social-email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="16" x="2" y="4" rx="2" />
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                        </svg>
+                        <span>t114360201@ntut.org.tw</span>
+                    </a>
+                    <a href="tel:+886903229226" class="social-icon-btn" title="Phone" id="social-phone">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                        <span>(+886) 903229226</span>
+                    </a>
+                    <a href="https://github.com/yihan0709" target="_blank" rel="noopener noreferrer"
+                        class="social-icon-btn" title="GitHub" id="social-github">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                            <path d="M9 18c-4.51 2-5-2-7-2" />
+                        </svg>
+                        <span>yihan0709</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Decorative Visual (Competency Radar Chart) -->
+            <div class="hero-visual">
+                <div class="radar-container">
+                    <!-- Native SVG Radar Polygon representation -->
+                    <svg viewBox="0 0 360 360" width="100%" height="100%" class="radar-svg">
+                        <defs>
+                            <radialGradient id="radar-glow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="var(--accent-purple)" stop-opacity="0.16" />
+                                <stop offset="100%" stop-color="var(--accent-indigo)" stop-opacity="0" />
+                            </radialGradient>
+                            <linearGradient id="poly-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="var(--accent-cyan)" stop-opacity="0.45" />
+                                <stop offset="100%" stop-color="var(--accent-indigo)" stop-opacity="0.45" />
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Glow base -->
+                        <circle cx="180" cy="180" r="145" fill="url(#radar-glow)" />
+
+                        <!-- Concentric circular bounds -->
+                        <circle cx="180" cy="180" r="130" fill="none" stroke="rgba(236, 72, 153, 0.08)"
+                            stroke-width="1.5" />
+                        <circle cx="180" cy="180" r="97.5" fill="none" stroke="rgba(236, 72, 153, 0.06)"
+                            stroke-width="1" />
+                        <circle cx="180" cy="180" r="65" fill="none" stroke="rgba(236, 72, 153, 0.06)"
+                            stroke-width="1" />
+                        <circle cx="180" cy="180" r="32.5" fill="none" stroke="rgba(236, 72, 153, 0.04)"
+                            stroke-width="1" />
+
+                        <!-- Grid axes lines -->
+                        <line x1="180" y1="180" x2="180" y2="50" stroke="rgba(236, 72, 153, 0.12)" stroke-width="1"
+                            stroke-dasharray="2,2" />
+                        <line x1="180" y1="180" x2="303.6" y2="139.8" stroke="rgba(236, 72, 153, 0.12)" stroke-width="1"
+                            stroke-dasharray="2,2" />
+                        <line x1="180" y1="180" x2="256.4" y2="285.2" stroke="rgba(236, 72, 153, 0.12)" stroke-width="1"
+                            stroke-dasharray="2,2" />
+                        <line x1="180" y1="180" x2="103.6" y2="285.2" stroke="rgba(236, 72, 153, 0.12)" stroke-width="1"
+                            stroke-dasharray="2,2" />
+                        <line x1="180" y1="180" x2="56.4" y2="139.8" stroke="rgba(236, 72, 153, 0.12)" stroke-width="1"
+                            stroke-dasharray="2,2" />
+
+                        <!-- Highlighting actual competency level polygon -->
+                        <polygon points="180,63 297.4,141.8 245,269.4 111.2,274.7 66.3,143" fill="url(#poly-grad)"
+                            stroke="var(--accent-cyan)" stroke-width="2.5"
+                            style="filter: drop-shadow(0 0 8px rgba(236, 72, 153, 0.4));" />
+
+                        <!-- Dots representing levels on axes -->
+                        <circle cx="180" cy="63" r="5.5" fill="var(--accent-cyan)" stroke="#fff" stroke-width="1" />
+                        <circle cx="297.4" cy="141.8" r="5.5" fill="var(--accent-purple)" stroke="#fff"
+                            stroke-width="1" />
+                        <circle cx="245" cy="269.4" r="5.5" fill="var(--accent-indigo)" stroke="#fff"
+                            stroke-width="1" />
+                        <circle cx="111.2" cy="274.7" r="5.5" fill="var(--accent-cyan)" stroke="#fff"
+                            stroke-width="1" />
+                        <circle cx="66.3" cy="143" r="5.5" fill="var(--accent-purple)" stroke="#fff" stroke-width="1" />
+                    </svg>
+
+                    <!-- Absolutely positioned text labels with label-only class (no dot) -->
+                    <div class="radar-node label-only" style="top: 9%; left: 50%;">
+                        <span class="node-label" style="border-color: var(--accent-cyan);">程式設計 (C/C++)</span>
+                    </div>
+                    <div class="radar-node label-only" style="top: 36%; left: 88%;">
+                        <span class="node-label" style="border-color: var(--accent-purple);">邏輯思維 (95%)</span>
+                    </div>
+                    <div class="radar-node label-only" style="top: 80%; left: 72%;">
+                        <span class="node-label" style="border-color: var(--accent-indigo);">硬體實作 (FPGA)</span>
+                    </div>
+                    <div class="radar-node label-only" style="top: 82%; left: 28%;">
+                        <span class="node-label" style="border-color: var(--accent-cyan);">團隊溝通 (教學長)</span>
+                    </div>
+                    <div class="radar-node label-only" style="top: 37%; left: 12%;">
+                        <span class="node-label" style="border-color: var(--accent-purple);">創新學習 (99%)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section-container">
+            <h2 class="section-title">關於我 <span>About Me</span></h2>
+            <div class="about-grid">
+                <!-- Life Photo Column -->
+                <div class="about-photo-card glass-card">
+                    <div class="photo-frame">
+                        <img src="images/life_photo.png" alt="趙羿涵 生活照" />
+                    </div>
+                    <div class="photo-caption">趙羿涵 (Yi-Han) @ 2026</div>
+                </div>
+
+                <!-- About Text Card -->
+                <div class="about-text-card glass-card">
+                    <h3>學術探索與程式熱忱</h3>
+                    <p>
+                        你好！我是趙羿涵，現就讀於國立臺北科技大學電子工程學系。從高中時期在中山女高資訊研究社擔任教學組組長起，我就對計算機科學與數位系統設計產生了濃厚的興趣。
+                    </p>
+                    <p>
+                        在學習上，我熱愛演算法思維與軟硬體整合實作。我追求學術卓越，大一在學期間取得了 <strong>GPA 3.89/4.0</strong> 的優異成績，於系所排名
+                        <strong>12/100</strong>。
+                    </p>
+                    <p>
+                        除了專業課業，我也積極參與大專院校微課程（如台大電機、師大電機與資工相關主題課程）與學術活動，在多元探索中不斷拓寬專業視野，並期待未來能發揮所學，投入跨領域的科技研發與專案開發。
+                    </p>
+                </div>
+
+                <!-- About Stats Column -->
+                <div class="about-stats">
+                    <div class="stat-card glass-card">
+                        <div class="stat-num">3.89</div>
+                        <div class="stat-label">大一累計 GPA</div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-num">12<span>/100</span></div>
+                        <div class="stat-label">系所累計排名</div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-num">4/3</div>
+                        <div class="stat-label">APCS 級分 Score</div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-num">780</div>
+                        <div class="stat-label">TOEIC 多益成績</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section-container">
+            <h2 class="section-title">教育背景 <span>Education</span></h2>
+            <div class="timeline">
+                <!-- NTUT -->
+                <div class="timeline-item glass-card">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-time">2025.09 – 至今</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="institution">國立臺北科技大學 (NTUT)</h3>
+                            <span class="degree-badge">電子系大一在學</span>
+                        </div>
+                        <h4 class="major">電子工程學系大一 (Electronic Engineering)</h4>
+                        <ul class="timeline-details">
+                            <li>學業成績優良，<strong>累計 GPA 3.89 / 4.0</strong>，全系所累計排名 <strong>12 / 100</strong>。</li>
+                            <li>在大一期間榮獲國立臺北科技大學極具聲譽之 <strong>三育獎 (2026/05)</strong> 表彰。</li>
+                            <li>專注於基本電學、數位邏輯設計、物理實驗等電機電子核心學門與實作。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Zhongshan Girls -->
+                <div class="timeline-item glass-card">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-time">2023.09 – 2025.06</div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="institution">臺北市立中山女子高級中學</h3>
+                            <span class="degree-badge">高中畢業</span>
+                        </div>
+                        <h4 class="major">數理資訊背景與社團幹部</h4>
+                        <ul class="timeline-details">
+                            <li>高中時期展現卓越資訊天賦，多次代表學校參與校外電資研習。</li>
+                            <li>積極參與程式設計競賽，連續三年勇奪校內資訊能力競賽一等獎、二等獎與三等獎。</li>
+                            <li>擔任 <strong>資訊研究社教學組組長</strong>，主導程式語言（C/C++）大綱設計與教學。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Projects Section -->
+        <section id="experience" class="section-container">
+            <h2 class="section-title">經歷與專案 <span>Experiences & Projects</span></h2>
+            <div class="research-grid">
+                <!-- Project Card 1: FPGA & Arduino -->
+                <div class="research-card glass-card">
+                    <div class="research-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="4" y="4" width="16" height="16" rx="2" />
+                            <rect x="9" y="9" width="6" height="6" />
+                            <line x1="9" y1="1" x2="9" y2="4" />
+                            <line x1="15" y1="1" x2="15" y2="4" />
+                            <line x1="9" y1="20" x2="9" y2="23" />
+                            <line x1="15" y1="20" x2="15" y2="23" />
+                            <line x1="20" y1="9" x2="23" y2="9" />
+                            <line x1="20" y1="15" x2="23" y2="15" />
+                            <line x1="1" y1="9" x2="4" y2="9" />
+                            <line x1="1" y1="15" x2="4" y2="15" />
+                        </svg>
+                    </div>
+                    <h3>電子工程軟硬體專案實作</h3>
+                    <p class="research-status">軟硬體整合實作 | 2025.09 - 至今</p>
+                    <p class="research-text">
+                        在大一期間積極投入電機電子領域學習。結合基本電學與數位邏輯，利用 Verilog 設計並實現加法器硬體電路，並在 FPGA 開發板上完成驗證；同時結合 Arduino
+                        開發板、感測器及電子元件，獨立設計完成數位電子琴專案，具備優秀的軟硬體協同開發與調錯能力。
+                    </p>
+                    <div class="tag-container">
+                        <span class="tag">Arduino</span>
+                        <span class="tag">FPGA</span>
+                        <span class="tag">Verilog</span>
+                        <span class="tag">Hardware Dev</span>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: Algorithms & competitive programming -->
+                <div class="research-card glass-card">
+                    <div class="research-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                    </div>
+                    <h3>演算法思維與程式競技</h3>
+                    <p class="research-status">程式設計與運算思維 | 2023.09 - 2025.06</p>
+                    <p class="research-text">
+                        深耕 C/C++ 程式設計與演算法，在大專程式設計先修檢測 (APCS) 中獲得觀念 4 級分與實作 3
+                        級分的頂尖成績。高中期間連續三年勇奪校內資訊能力競賽一等獎、二等獎與三等獎，展現卓越的邏輯思維、實作效率與程式除錯能力。
+                    </p>
+                    <div class="tag-container">
+                        <span class="tag">C/C++</span>
+                        <span class="tag">APCS 4/3</span>
+                        <span class="tag">Algorithms</span>
+                        <span class="tag">Problem Solving</span>
+                    </div>
+                </div>
+
+                <!-- Experience Card: Zhongshan Presidency -->
+                <div class="research-card glass-card full-width-card">
+                    <div class="research-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <div class="card-horizontal-content">
+                        <div>
+                            <h3>中山女子高級中學資訊研究社 教學組組長</h3>
+                            <p class="research-status">社團領導與教學傳承 | 2024.07 – 2025.06</p>
+                            <ul class="timeline-details"
+                                style="margin-top: 10px; margin-bottom: 15px; padding-left: 20px; color: var(--text-secondary);">
+                                <li style="margin-bottom: 6px;">
+                                    <strong>負責規劃與執行社團教學課程</strong>：主導並規劃年度教學大綱，引導全體社員高效率且有系統地掌握 C/C++ 程式設計與計算機科學核心概念。
+                                </li>
+                                <li><strong>製作高品質教材與實作講義</strong>：獨立設計數十套教學簡報、程式習題與動態上機實作教材，顯著提升課堂品質與社員程式自主開發成效。</li>
+                            </ul>
+                            <div class="tag-container">
+                                <span class="tag">Leadership</span>
+                                <span class="tag">CS Education</span>
+                                <span class="tag">C/C++ Programming</span>
+                                <span class="tag">Curriculum Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Awards Subsection -->
+            <div class="awards-subsection">
+                <h3 class="subsection-title">榮譽、獲獎與專業檢定 <span>Awards & Credentials</span></h3>
+                <div class="awards-grid">
+                    <!-- NTUT Award -->
+                    <div class="award-card glass-card">
+                        <div class="award-badge">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="7" />
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                            </svg>
+                        </div>
+                        <h4>國立臺北科技大學 三育獎</h4>
+                        <p class="award-date">2026 / 05</p>
+                        <p class="award-desc">表彰在大一學年德、智、體、群、美等學科領域全方位且卓越之學術及綜合素質表現。</p>
+                    </div>
+                    <!-- APCS Score -->
+                    <div class="award-card glass-card">
+                        <div class="award-badge" style="color: var(--accent-indigo);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z" />
+                                <path d="M6 6h10M6 10h10" />
+                            </svg>
+                        </div>
+                        <h4>APCS 觀念4級分 / 實作3級分</h4>
+                        <p class="award-date" style="color: var(--accent-indigo);">2024 / 04</p>
+                        <p class="award-desc">於大學程式設計先修檢測 (APCS) 中取得頂尖評級，充分認證優秀的演算法思維與實作力。</p>
+                    </div>
+                    <!-- TOEIC Score -->
+                    <div class="award-card glass-card">
+                        <div class="award-badge" style="color: var(--accent-indigo);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="2" y1="12" x2="22" y2="12" />
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            </svg>
+                        </div>
+                        <h4>TOEIC 多益英語測驗 780分</h4>
+                        <p class="award-date" style="color: var(--accent-indigo);">2025 / 02</p>
+                        <p class="award-desc">取得多益 780分優異成績，具備流暢無礙的學術英文文獻閱讀、學術交流與國際化科研能力。</p>
+                    </div>
+                    <!-- Zhongshan Award 1 -->
+                    <div class="award-card glass-card">
+                        <div class="award-badge">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="7" />
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                            </svg>
+                        </div>
+                        <h4>中山女高校內資訊能力競賽 一等獎</h4>
+                        <p class="award-date">2024 / 10</p>
+                        <p class="award-desc">於高三校內資訊能力賽中，以優異的演算法解題與問題分析能力，勇奪第一名一等獎。</p>
+                    </div>
+                    <!-- Zhongshan Award 2 -->
+                    <div class="award-card glass-card">
+                        <div class="award-badge">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="7" />
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                            </svg>
+                        </div>
+                        <h4>中山女高校內資訊能力競賽 二等獎</h4>
+                        <p class="award-date">2023 / 09</p>
+                        <p class="award-desc">在高二校內競賽中表現卓越，於限時演算法編程與邏輯推理賽題中獲得二等獎殊榮。</p>
+                    </div>
+                    <!-- Zhongshan Award 3 -->
+                    <div class="award-card glass-card">
+                        <div class="award-badge">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="8" r="7" />
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+                            </svg>
+                        </div>
+                        <h4>中山女高校內資訊能力競賽 三等獎</h4>
+                        <p class="award-date">2022 / 09</p>
+                        <p class="award-desc">高一入學即展現卓越的程式設計邏輯與天賦，勇奪校內資訊能力賽三等獎獎項。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activities Section -->
+        <section id="activities" class="section-container">
+            <h2 class="section-title">學術活動與工作坊 <span>Academic Activities</span></h2>
+            <p class="section-intro">積極參與各領域頂尖學術機構、大專院校微課程與工作坊，奠定扎實的資訊、AI 與硬體設計底蘊。</p>
+
+            <div class="activity-grid">
+                <!-- Activity 1 -->
+                <div class="activity-card glass-card">
+                    <div class="activity-meta">
+                        <span class="activity-host">國際資訊奧林匹亞推廣活動</span>
+                        <span class="activity-date">Winter Camp</span>
+                    </div>
+                    <h3>鬥 code 少女冬令營</h3>
+                    <p class="activity-desc">
+                        專為推廣資訊奧林匹亞舉辦之營隊。<strong>致力於提升資料結構與演算法的實作能力</strong>，與全台優秀女性程式精英深入切磋學習。
+                    </p>
+                </div>
+
+                <!-- Activity 2 -->
+                <div class="activity-card glass-card">
+                    <div class="activity-meta">
+                        <span class="activity-host">國立臺灣師範大學資工系</span>
+                        <span class="activity-date">Course</span>
+                    </div>
+                    <h3>APCS C/C++ 程式設計課程</h3>
+                    <p class="activity-desc">
+                        <strong>學習 C++ 進階語法與程式設計技巧</strong>，完成大量演算法與資料結構程式題目的編寫實作與高效除錯（Debugging）練習。
+                    </p>
+                </div>
+
+                <!-- Activity 3 -->
+                <div class="activity-card glass-card">
+                    <div class="activity-meta">
+                        <span class="activity-host">中山女高暨陽明交大跨學程</span>
+                        <span class="activity-date">AI Workshop</span>
+                    </div>
+                    <h3>高中生 AI 工作坊</h3>
+                    <p class="activity-desc">
+                        探索前沿人工智慧技術，<strong>系統性學習深度學習、GAN (生成對抗網路)、Diffusion Model (擴散模型) 與生成式 AI 的基本概念</strong>。
+                    </p>
+                </div>
+
+                <!-- Activity 4 -->
+                <div class="activity-card glass-card">
+                    <div class="activity-meta">
+                        <span class="activity-host">臺灣大學電機系及光電所</span>
+                        <span class="activity-date">Micro-course</span>
+                    </div>
+                    <h3>電資通領域微課程</h3>
+                    <p class="activity-desc">
+                        開拓電機與通訊技術視野，並在實作課中<strong>利用 Arduino 順利製作出具備基本音階的簡易電子琴</strong>，探索感測與控制整合。
+                    </p>
+                </div>
+
+                <!-- Activity 5 -->
+                <div class="activity-card glass-card">
+                    <div class="activity-meta">
+                        <span class="activity-host">國立臺灣師範大學電機系</span>
+                        <span class="activity-date">Micro-course</span>
+                    </div>
+                    <h3>IC 設計簡介與實作微課程</h3>
+                    <p class="activity-desc">
+                        接觸晶片積體電路設計的基本架構。<strong>學習 Verilog 硬體描述語言，並實際運用 FPGA 開發板動態實作出加法器電路</strong>。
+                    </p>
+                </div>
+
+                <!-- Activity 6 -->
+                <div class="activity-card glass-card">
+                    <div class="activity-meta">
+                        <span class="activity-host">國立臺灣師範大學電機系</span>
+                        <span class="activity-date">Service Learning</span>
+                    </div>
+                    <h3>館藏整理與讀者服務</h3>
+                    <p class="activity-desc">
+                        熱心關懷與回饋。<strong>主動協助圖書館進行圖書館藏整理、書籍上架與多媒體資源管理工作</strong>，培養優異的細心度與服務素養。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Grades Section -->
+        <section id="courses" class="section-container">
+            <h2 class="section-title">修課表現 <span>Academic Performance</span></h2>
+            <p class="section-intro">大一第一學期修習電子工程核心必修與通識學科，憑藉優異表現取得極高學業評分：</p>
+
+            <div class="courses-flex-grid">
+                <!-- Course 1 -->
+                <div class="course-card glass-card">
+                    <div class="course-circle-progress" data-grade="98" style="--grade-color: #06b6d4;">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring-circle-bg" stroke="rgba(255,255,255,0.05)" stroke-width="8"
+                                fill="transparent" r="50" cx="60" cy="60" />
+                            <circle class="progress-ring-circle" stroke="url(#cyan-grad)" stroke-width="8"
+                                fill="transparent" r="50" cx="60" cy="60"
+                                style="stroke-dasharray: 314.16; stroke-dashoffset: 6.28;" />
+                        </svg>
+                        <div class="grade-text">98</div>
+                    </div>
+                    <div class="course-info">
+                        <h3>物理實驗</h3>
+                        <p class="course-desc">涵蓋精密物理量測、電磁與光學實驗。在實驗設計、數據建模與報告撰寫上均獲最頂尖成績。</p>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course-card glass-card">
+                    <div class="course-circle-progress" data-grade="99" style="--grade-color: #8b5cf6;">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring-circle-bg" stroke="rgba(255,255,255,0.05)" stroke-width="8"
+                                fill="transparent" r="50" cx="60" cy="60" />
+                            <circle class="progress-ring-circle" stroke="url(#purple-grad)" stroke-width="8"
+                                fill="transparent" r="50" cx="60" cy="60"
+                                style="stroke-dasharray: 314.16; stroke-dashoffset: 3.14;" />
+                        </svg>
+                        <div class="grade-text">99</div>
+                    </div>
+                    <div class="course-info">
+                        <h3>創業概論</h3>
+                        <p class="course-desc">研究商業模式設計、新創團隊運作與創投資金估算。期末新創企劃發表獲得評審高度讚賞。</p>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="course-card glass-card">
+                    <div class="course-circle-progress" data-grade="95" style="--grade-color: #6366f1;">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring-circle-bg" stroke="rgba(255,255,255,0.05)" stroke-width="8"
+                                fill="transparent" r="50" cx="60" cy="60" />
+                            <circle class="progress-ring-circle" stroke="url(#indigo-grad)" stroke-width="8"
+                                fill="transparent" r="50" cx="60" cy="60"
+                                style="stroke-dasharray: 314.16; stroke-dashoffset: 15.71;" />
+                        </svg>
+                        <div class="grade-text">95</div>
+                    </div>
+                    <div class="course-info">
+                        <h3>基本電學與實習</h3>
+                        <p class="course-desc">研究 KVL/KCL、交流與直流電路分析、濾波器與共振電路實作。實習電路組裝除錯表現特優。</p>
+                    </div>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="course-card glass-card">
+                    <div class="course-circle-progress" data-grade="94" style="--grade-color: #ec4899;">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring-circle-bg" stroke="rgba(255,255,255,0.05)" stroke-width="8"
+                                fill="transparent" r="50" cx="60" cy="60" />
+                            <circle class="progress-ring-circle" stroke="url(#pink-grad)" stroke-width="8"
+                                fill="transparent" r="50" cx="60" cy="60"
+                                style="stroke-dasharray: 314.16; stroke-dashoffset: 18.85;" />
+                        </svg>
+                        <div class="grade-text">94</div>
+                    </div>
+                    <div class="course-info">
+                        <h3>親密關係</h3>
+                        <p class="course-desc">探討人際互動心理學、溝通技巧、情緒智商與親密關係建立，培養高度的人文關懷與同理心。</p>
+                    </div>
+                </div>
+
+                <!-- Course 5 -->
+                <div class="course-card glass-card">
+                    <div class="course-circle-progress" data-grade="90" style="--grade-color: #10b981;">
+                        <svg class="progress-ring" width="120" height="120">
+                            <circle class="progress-ring-circle-bg" stroke="rgba(255,255,255,0.05)" stroke-width="8"
+                                fill="transparent" r="50" cx="60" cy="60" />
+                            <circle class="progress-ring-circle" stroke="url(#green-grad)" stroke-width="8"
+                                fill="transparent" r="50" cx="60" cy="60"
+                                style="stroke-dasharray: 314.16; stroke-dashoffset: 31.42;" />
+                        </svg>
+                        <div class="grade-text">90</div>
+                    </div>
+                    <div class="course-info">
+                        <h3>數位邏輯設計</h3>
+                        <p class="course-desc">布林代數簡化、組合邏輯電路（多工器、解碼器）與序向邏輯電路（正反器、計數器）設計。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SVG Gradients Definition for Progress Rings -->
+        <svg style="width:0; height:0; position:absolute;" aria-hidden="true">
+            <defs>
+                <linearGradient id="cyan-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ec4899" />
+                    <stop offset="100%" stop-color="#8b5cf6" />
+                </linearGradient>
+                <linearGradient id="purple-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#a855f7" />
+                    <stop offset="100%" stop-color="#8b5cf6" />
+                </linearGradient>
+                <linearGradient id="indigo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#8b5cf6" />
+                    <stop offset="100%" stop-color="#ec4899" />
+                </linearGradient>
+                <linearGradient id="pink-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ec4899" />
+                    <stop offset="100%" stop-color="#db2777" />
+                </linearGradient>
+                <linearGradient id="green-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#8b5cf6" />
+                    <stop offset="100%" stop-color="#a855f7" />
+                </linearGradient>
+            </defs>
+        </svg>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-container">
+            <h2 class="section-title">聯絡我 <span>Contact Me</span></h2>
+            <div class="contact-grid">
+                <div class="contact-info-card glass-card">
+                    <h3>與我取得聯繫</h3>
+                    <p>我目前正積極參與大型語言模型與電資通領域的學術研究及實作專案。不論您是有研究合作的構想、學術專案的交流，或是社團活動的講座邀請，我都非常歡迎您的來信！</p>
+
+                    <div class="contact-details-list">
+                        <!-- Email Link -->
+                        <a href="mailto:t114360201@ntut.org.tw" class="contact-detail-item" id="contact-link-email">
+                            <div class="detail-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect width="20" height="16" x="2" y="4" rx="2" />
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                                </svg>
+                            </div>
+                            <div class="detail-text">
+                                <span class="detail-title">電子郵件 Email</span>
+                                <span class="detail-value">t114360201@ntut.org.tw</span>
+                            </div>
+                        </a>
+                        <!-- Phone Link -->
+                        <a href="tel:+886903229226" class="contact-detail-item" id="contact-link-phone">
+                            <div class="detail-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
+                            </div>
+                            <div class="detail-text">
+                                <span class="detail-title">行動電話 Mobile</span>
+                                <span class="detail-value">(+886) 903229226</span>
+                            </div>
+                        </a>
+                        <!-- GitHub Link -->
+                        <a href="https://github.com/yihan0709" target="_blank" rel="noopener noreferrer"
+                            class="contact-detail-item" id="contact-link-github">
+                            <div class="detail-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                                    <path d="M9 18c-4.51 2-5-2-7-2" />
+                                </svg>
+                            </div>
+                            <div class="detail-text">
+                                <span class="detail-title">GitHub 平台</span>
+                                <span class="detail-value">github.com/yihan0709</span>
+                            </div>
+                        </a>
+                        <!-- Web Link -->
+                        <a href="https://yihan0709.github.io" class="contact-detail-item" id="contact-link-web">
+                            <div class="detail-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <line x1="2" y1="12" x2="22" y2="12" />
+                                    <path
+                                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                                </svg>
+                            </div>
+                            <div class="detail-text">
+                                <span class="detail-title">個人主頁 Website</span>
+                                <span class="detail-value">yihan0709.github.io</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Live Contact Form -->
+                <div class="contact-form-card glass-card">
+                    <h3>發送訊息給我</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="form-name">您的姓名 Name</label>
+                            <input type="text" id="form-name" placeholder="輸入您的姓名..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-email">電子郵件 Email</label>
+                            <input type="email" id="form-email" placeholder="example@domain.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-subject">主旨 Subject</label>
+                            <input type="text" id="form-subject" placeholder="合作探討、學術交流..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="form-message">訊息內容 Message</label>
+                            <textarea id="form-message" rows="5" placeholder="寫下您的訊息..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="btn-submit">
+                            <span>發送訊息</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13" />
+                                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                            </svg>
+                        </button>
+                    </form>
+                    <div id="form-status-message" class="hidden"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2026 趙羿涵 Yi-Han Chao. All rights reserved.</p>
+            <p class="footer-note">Handcrafted with ❤️ for GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <!-- External JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

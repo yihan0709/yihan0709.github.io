@@ -465,6 +465,46 @@ ul {
     align-items: center;
 }
 
+.mbti-summary {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 12px 16px;
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(236, 72, 153, 0.1);
+    box-shadow: 0 8px 24px rgba(139, 92, 246, 0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    pointer-events: none;
+}
+
+.mbti-summary .mbti-kicker {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--accent-cyan);
+    letter-spacing: 0.08em;
+}
+
+.mbti-summary strong {
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+    line-height: 1;
+    color: var(--text-primary);
+}
+
+.mbti-summary span:last-child {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
 .radar-ring {
     position: absolute;
     border-radius: 50%;

@@ -107,9 +107,15 @@
                 </div>
             </div>
 
-            <!-- Hero Decorative Visual (Competency Radar Chart) -->
+            <!-- Hero Decorative Visual (MBTI Radar Chart) -->
             <div class="hero-visual">
                 <div class="radar-container">
+                    <div class="mbti-summary">
+                        <span class="mbti-kicker">MBTI</span>
+                        <strong>ISFP-T</strong>
+                        <span>冒險家</span>
+                    </div>
+
                     <!-- Native SVG Radar Polygon representation -->
                     <svg viewBox="0 0 360 360" width="100%" height="100%" class="radar-svg">
                         <defs>
@@ -148,37 +154,37 @@
                         <line x1="180" y1="180" x2="56.4" y2="139.8" stroke="rgba(236, 72, 153, 0.12)" stroke-width="1"
                             stroke-dasharray="2,2" />
 
-                        <!-- Highlighting actual competency level polygon -->
-                        <polygon points="180,63 297.4,141.8 245,269.4 111.2,274.7 66.3,143" fill="url(#poly-grad)"
+                        <!-- Highlighting MBTI trait percentages: 68, 54, 53, 69, 78 -->
+                        <polygon points="180,91.6 246.7,158.3 212.4,224.6 127.3,252.5 83.6,148.7" fill="url(#poly-grad)"
                             stroke="var(--accent-cyan)" stroke-width="2.5"
                             style="filter: drop-shadow(0 0 8px rgba(236, 72, 153, 0.4));" />
 
                         <!-- Dots representing levels on axes -->
-                        <circle cx="180" cy="63" r="5.5" fill="var(--accent-cyan)" stroke="#fff" stroke-width="1" />
-                        <circle cx="297.4" cy="141.8" r="5.5" fill="var(--accent-purple)" stroke="#fff"
+                        <circle cx="180" cy="91.6" r="5.5" fill="var(--accent-cyan)" stroke="#fff" stroke-width="1" />
+                        <circle cx="246.7" cy="158.3" r="5.5" fill="var(--accent-purple)" stroke="#fff"
                             stroke-width="1" />
-                        <circle cx="245" cy="269.4" r="5.5" fill="var(--accent-indigo)" stroke="#fff"
+                        <circle cx="212.4" cy="224.6" r="5.5" fill="var(--accent-indigo)" stroke="#fff"
                             stroke-width="1" />
-                        <circle cx="111.2" cy="274.7" r="5.5" fill="var(--accent-cyan)" stroke="#fff"
+                        <circle cx="127.3" cy="252.5" r="5.5" fill="var(--accent-cyan)" stroke="#fff"
                             stroke-width="1" />
-                        <circle cx="66.3" cy="143" r="5.5" fill="var(--accent-purple)" stroke="#fff" stroke-width="1" />
+                        <circle cx="83.6" cy="148.7" r="5.5" fill="var(--accent-purple)" stroke="#fff" stroke-width="1" />
                     </svg>
 
                     <!-- Absolutely positioned text labels with label-only class (no dot) -->
                     <div class="radar-node label-only" style="top: 9%; left: 50%;">
-                        <span class="node-label" style="border-color: var(--accent-cyan);">程式設計 (C/C++)</span>
+                        <span class="node-label" style="border-color: var(--accent-cyan);">Introverted 68%</span>
                     </div>
                     <div class="radar-node label-only" style="top: 36%; left: 88%;">
-                        <span class="node-label" style="border-color: var(--accent-purple);">邏輯思維 (95%)</span>
+                        <span class="node-label" style="border-color: var(--accent-purple);">Observant 54%</span>
                     </div>
                     <div class="radar-node label-only" style="top: 80%; left: 72%;">
-                        <span class="node-label" style="border-color: var(--accent-indigo);">硬體實作 (FPGA)</span>
+                        <span class="node-label" style="border-color: var(--accent-indigo);">Feeling 53%</span>
                     </div>
                     <div class="radar-node label-only" style="top: 82%; left: 28%;">
-                        <span class="node-label" style="border-color: var(--accent-cyan);">團隊溝通 (教學長)</span>
+                        <span class="node-label" style="border-color: var(--accent-cyan);">Prospecting 69%</span>
                     </div>
                     <div class="radar-node label-only" style="top: 37%; left: 12%;">
-                        <span class="node-label" style="border-color: var(--accent-purple);">創新學習 (99%)</span>
+                        <span class="node-label" style="border-color: var(--accent-purple);">Turbulent 78%</span>
                     </div>
                 </div>
             </div>
